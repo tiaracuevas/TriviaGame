@@ -1,0 +1,30 @@
+p{
+margin-right: 20px;
+text-align: center;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+body {
+    text-align: center;
+     
+    background-color: none;
+}
+
+html {
+    
+}
+
+.myForm {
+    margin-bottom: 20px;
+}
+
+.jumbotron{
+    background-image: url("http://www.amazingwallpaperz.com/wp-content/uploads/Fresh-Graffiti-Cool-Backgrounds-Wallpapers.jpg");
+    background-size:794px 200px;
+    color: white;
+    text-outline: 10px black;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+      
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+        <!-- Added a link to Bootstrap-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+        <!-- Link to css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    
+
+</head>
+
+<body>
+
+    <!-- Title -->
+    <div class="jumbotron">
+            <h1 class="text-center">Trivia Game</h1>
+            </div>
+
+<div class="container">
+
+    <!-- Instructions -->
+    <div id="instructions">
+        <p>You have 60 seconds to answer 10 questions about the Fresh Prince of Bel-Air</p>
+        <img src="assets/images/fresh_prince.jpg" alt="intro">
+        <button id="start">Start!</button>
+    </div>
+
+     <!-- show at end of game -->
+     <div id="end-game">
+                <!-- Total Score-->
+                <p id="score"></p>
+
+            <img src="assets/images/end_game.jpg" alt="end-game">
+            <h1>Thanks for playing!</h1>
+            <p>Would you like to play again?</p>
+            <button id="start-game">Yes!</button>
+            <br>
+            <br>
+            <br>
+        </div>
+
+    <!-- Timer -->
+    <div class="row" id="timer-container">
+        <p>Timer <span id="time"></span></p>
+    </div>
+
+    <!-- Questions & Answer Choices -->
+    <div class="row question" id="question1">
+        <p>1. Who plays the Fresh Prince?</p>
+        <br>
+        <form class="myForm">
+            <input type="radio" name="q1" value="James Earl Jones"> James Earl Jones
+            <input type="radio" name="q1" value="Bob Marley"> Bob Marley
+            <input type="radio" name="q1" value="Will Smith"> Will Smith
+            <input type="radio" name="q1" value="Denzel Washington"> Denzel Washington
+        </form>
+        
+    </div>
+
+    <div class="row question" id="question2">
+        <p>2. Which famous DJ plays Will's best friend Jazz?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q2" value="Jeff Townes"> Jeff Townes
+                <input type="radio" name="q2" value="Thomas Jefferson"> Thomas Jefferson
+                <input type="radio" name="q2" value="George Jefferson"> George Jefferson
+                <input type="radio" name="q2" value="Phil Jackson"> Phil Jackson
+            </form>
+    </div>
+
+    <div class="row question" id="question3">
+        <p>3. Who was the cab driver in the opening credits?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q3" value="Bob Jones"> Bob Jones
+                <input type="radio" name="q3" value="Quincy Jones"> Quincy Jones
+                <input type="radio" name="q3" value="Paul Jones"> Paul Jones
+                <input type="radio" name="q3" value="Greg Jones"> Greg Jones
+            </form>
+    </div>
+
+    <div class="row question" id="question4">
+        <p>4. Where was the Fresh Prince born and raised?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q4" value="West Philadelphia"> West Philadelphia
+                <input type="radio" name="q4" value="South Philadelphia"> South Philadelphia
+                <input type="radio" name="q4" value="North Philadelphia"> North Philadelphia
+                <input type="radio" name="q4" value="East Philadelphia"> East Philadelphia
+            </form>
+    </div>
+
+    <div class="row question" id="question5">
+        <p>5. Which celebrity did NOT appear on the show?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q5" value="Chris Rock"> Chris Rock
+                <input type="radio" name="q5" value="Tyra Banks"> Tyra Banks
+                <input type="radio" name="q5" value="Naomi Campbell"> Naomi Campbell
+                <input type="radio" name="q5" value="Kevin Hart"> Kevin Hart
+            </form>
+    </div>
+
+    <div class="row question" id="question6">
+        <p>6. What character does Karyn Parsons play on the show?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q6" value="Vivian Banks"> Vivian Banks
+                <input type="radio" name="q6" value="Hilary Banks"> Hilary Banks
+                <input type="radio" name="q6" value="Ashley Banks"> Ashley Banks
+                <input type="radio" name="q6" value="Judy Banks"> Judy Banks
+            </form>
+    </div>
+
+    <div class="row question" id="question7">
+        <p>7. Which child is the youngest in the Banks family?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q7" value="Ashley"> Ashley
+                <input type="radio" name="q7" value="Hilary"> Hilary
+                <input type="radio" name="q7" value="Nicky"> Nicky
+                <input type="radio" name="q7" value="Carlton"> Carlton
+            </form>
+    </div>
+
+    <div class="row question" id="question8">
+        <p>8. What college did Will and Carlton attend?</p>
+        <form class="myForm">
+                <input type="radio" name="q8" value="ULA"> ULA
+                <input type="radio" name="q8" value="USC"> USC
+                <input type="radio" name="q8" value="Harvard"> Harvard
+                <input type="radio" name="q8" value="UCLA"> UCLA
+            </form>
+    </div>
+
+    <div class="row question" id="question9">
+        <p>9. What famous basketball player did Will play against in his dream?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q9" value="Michael Jordan"> Michael Jordan
+                <input type="radio" name="q9" value="Isaiah Thomas"> Isaiah Thomas
+                <input type="radio" name="q9" value="Kobe Bryant"> Kobe Bryant
+                <input type="radio" name="q9" value="Vince Carter"> Vince Carter
+            </form>
+    </div>
+
+    <div class="row question" id="question10">
+        <p>10. How many seasons did the show run?</p>
+        <br>
+        <form class="myForm">
+                <input type="radio" name="q10" value="2"> 2
+                <input type="radio" name="q10" value="5"> 5
+                <input type="radio" name="q10" value="8"> 8
+                <input type="radio" name="q10" value="6"> 6
+            </form>
+    </div>
+
+
+    <button type="submit" id="submit">Check Answers</button>
+
+    <!-- Total Score-->
+    <div class="row" id="totalScore">
+        <p id="score"></p>
+    </div>
+    
+
+
+
+
+
+
+
+<!--end container-->
+</div>
+    <!-- Link to javaScript -->
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
